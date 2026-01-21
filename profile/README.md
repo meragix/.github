@@ -26,29 +26,17 @@ As a full-stack developer building Flutter applications day in and day out, I ke
 
 ### Zema
 
-> The "Zero-Overhead" Data Engine for Dart & Flutter.
+> Zod-like schema validation for Dart
 
-Zema is the fastest schema validation and data integrity engine for the Dart ecosystem. Built with Performance-First principles using Dart Extension Types, it provides a Zod-like developer experience without the runtime memory tax.
+Runtime type validation with TypeScript-like developer experience.
 
-#### Why Zema?
-- **Zero-Allocation Validation**: Leveraging Dart’s newest language features, Zema validates data without creating unnecessary wrapper objects. It’s built for high-performance mobile and server-side apps.
-- **Single Source of Truth**: (Upcoming) Define your schema once. Export it to TypeScript, OpenAPI, or generate SQL/Drift tables automatically.
-- **Flutter-First DX**: (In Progress) Reactive form integration that handles validation, error messaging, and type-safety with zero boilerplate.
-- **Strong Type Inference**: If it passes the schema, it's typed. No more manual casting or dynamic data handling.
+Features:
+- [ ] 🚀 Zero-Allocation Engine
+- [ ] ✅ Fluent validation API
+- [ ] 🎯 Inferential Type Safety
+- [ ] 🧩 Composition over Inheritance
+- [ ] 📝 Custom error messages
 
-Quick Startimport 'package:zema/zema.dart';
-
-final userSchema = z.object({
-  'name': z.string().min(2),
-  'email': z.string().email(),
-  'age': z.number().positive().optional(),
-});
-
-// Type-safe parsing
-final user = userSchema.parse(data);
-print(user.name); // String guaranteed
-
-#### Quick Start
 ```dart
 import 'package:zema/zema.dart';
 
@@ -65,17 +53,17 @@ print(user.name); // String guaranteed
 
 ### Qora
 
-> Typed server-state management for Dart.
+> Typed server-state management for Dart with caching & sync
 
-Qora transforms unpredictable asynchronous streams into robust, type-safe UI states. Inspired by TanStack Query but built for the Dart ecosystem, it handles caching, synchronization, and background updates with zero boilerplate.
+Qora Inspired by TanStack Query, Qora handles server-state complexity with elegance.
 
-#### Why Qora?
-- **Agnostic by design**: Unlike other libraries, Qora doesn't force a specific HTTP client or Database. Use Dio, Http, Hive, or SharedPrefs via lightweight adapters.
-- **JIT (Just-In-Time) Deserialization**: Optimize CPU usage by decoding JSON into objects only when a widget actually requests the data.
-- **Automatic Resource Management**: Built-in query cancellation. When a widget unmounts, Qora stops the network request automatically to save battery and bandwidth.
-- **Resilient Offline-First**: Seamlessly hydrate your cache from disk at startup. Your app stays functional even without a connection.
+Features:
+- [ ] 🔄 Automatic background refetching
+- [ ] 💾 Smart caching with TTL
+- [ ] 🔌 Offline-first support
+- [ ] 🎯 Type-safe queries and mutations
+- [ ] ⚡ Deduplication & request batching
 
-#### Quick Start
 ```dart
 import 'package:qora/qora.dart';
 
