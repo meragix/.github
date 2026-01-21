@@ -2,6 +2,10 @@
 
 High-Performance Software Engineering for the Dart & Flutter Ecosystem.
 
+## Vision
+
+Meragix isn't a collection of weekend experiments or quick hacks. These packages are battle-tested solutions born from real-world problems I've encountered over years of Flutter development. Every package in this ecosystem is currently being used in production applications I actively maintain and develop.
+
 ## Why Meragix Exists
 
 As a full-stack developer building Flutter applications day in and day out, I kept running into the same frustrations: reinventing authentication flows, managing server state, validating data, and dealing with dependency health issues. Instead of copying boilerplate code between projects or settling for incomplete solutions, I decided to build the tools I wish existed.
@@ -67,26 +71,58 @@ Features:
 ```dart
 import 'package:qora/qora.dart';
 
-qora.fetch<User>(
-  ['profile', 123],                      // 1. A unique ID (Key) to remember this data
-  queryFn: (signal) => api.getUser(123), // 2. The actual API call
-  decoder: (json) => User.fromJson(json) // 3. How to transform JSON into a real Object
-  options: QoraOptions(
-    staleTime: 5.minutes,
-    retryCount: 3,
-  ),
+await qora.fetch<User>(
+  ['user', id],
+  queryFn: () => api.getUser(id),
+  decoder: (json) => User.fromJson(json),
+  options: {
+    staleTime: Duration(minutes: 5),
+  }
 );
+```
 
-QoraBuilder<User>(
-  queryKey: ['profile', 123], // Qora knows exactly which data to watch
-  builder: (context, state) {
-    // Qora tells you exactly what is happening:
-    if (state.isLoading) return Text("Loading..."); 
-    if (state.hasError)  return Text("Offline or Server Error");
-    
-    return Text("Welcome, ${state.data.name}!");
-  },
-)
+### Authyra
+
+> NextAuth.js-inspired authentication framework for Flutter
+
+A unified, extensible, and ready-to-use authentication solution for mobile, web, and desktop applications.
+
+Features:
+- [ ] 🔐 Multiple auth providers (OAuth, Email/Password, Magic Links)
+- [ ] 🎯 Type-safe session management
+- [ ] 🔄 Auto-refresh tokens
+- [ ] 📱 Cross-platform support
+- [ ] 👥 Native Multi-Account Support
+
+```dart
+import 'package:authyra/authyra.dart';
+
+// Simple, powerful authentication
+await Authyra.instance.signIn(
+  provider: 'email',
+  credentials: {'email': 'user@app.com', 'password': '***'},
+);
+```
+
+### Cura
+
+> Smart health audit tool for Flutter dependencies
+
+Keep your Flutter project healthy by auditing dependencies and detecting issues.
+
+Features:
+- [ ] ⚖️ Legal Compliance Audit
+- [ ] 💡 Intelligent Alternative Engine
+- [ ] 🛡️ Real-time Security Guard
+- [ ] 📊 Smart Cura Scoring
+- [ ] 🤖 CI/CD integration
+
+```dart
+# Run audit
+dart run cura audit
+
+# Check specific package
+dart run cura check http
 ```
 
 ###
