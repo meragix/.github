@@ -125,6 +125,74 @@ dart run cura audit
 dart run cura check http
 ```
 
+## Contributing
+
+We welcome contributions from the community! Whether it's bug reports, feature requests, or pull requests, every contribution helps make Meragix better.
+
+### How to Contribute
+
+1. **Fork the repository** you want to contribute to
+2. **Create a feature branch** (git checkout -b feature/amazing-feature)
+3. **Make your changes** with clear, descriptive commits
+4. **Write/update tests**  to cover your changes
+5. **Update documentation** if needed
+6. **Submit a pull request**
+
+### Development Guidelines
+
+#### Code Style
+
+- Follow the Effective Dart style guide
+- Use dart format before committing
+- Keep functions small and focused
+- Write self-documenting code with clear naming
+
+#### Testing
+
+- Write unit tests for all new features
+- Maintain or improve code coverage
+- Test edge cases and error scenarios
+- Run dart test before submitting PR
+
+#### Documentation
+
+- Update README.md with new features
+- Add inline documentation for public APIs
+- Include usage examples
+- Update CHANGELOG.md following [Keep a Changelog](https://keepachangelog.com)
+
+#### Commit Messages
+
+Follow [Conventional Commits](https://www.conventionalcommits.org):
+```
+feat: add OAuth provider for GitHub
+fix: resolve token refresh race condition
+docs: update authentication examples
+test: add tests for edge cases
+```
+
+#### Reporting Issues
+
+When reporting bugs, please include:
+- Package name and version
+- Dart/Flutter version
+- Steps to reproduce
+- Expected vs actual behavior
+- Code sample (if applicable)
+
+## Community
+- **GitHub Discussions**: Ask questions and share ideas
+- Discord: Join our Discord server (coming soon)
+- Twitter: Follow @meragix for updates (coming soon)
+
+### Contributors
+
+Thanks to all the amazing people who contribute to Meragix!
+�
+
+📄 License
+All Meragix packages are licensed under the .
+
 ###
 
 **Meragix** is not a collection of experimental tools.
@@ -134,107 +202,9 @@ Meragix follows a simple principle:
 Build tools that you can trust today, and still rely on years from now.
 This ecosystem is shaped by production constraints, not trends.
 Design decisions are guided by maintainability, clarity, and long-term stability.
-Core principles:
-Stability over novelty
-Features are introduced only when they solve real problems.
-Explicit and predictable APIs
-No magic, no hidden behaviors.
-Composable architecture
-Packages are independent but designed to work seamlessly together.
-Production-first mindset
-Every tool is built and evolved through real application usage.
-Long-Term Commitment
-Meragix is built for the long run.
-All packages in this ecosystem:
-are actively used in production
-evolve based on real feedback and constraints
-prioritize backward compatibility
-avoid unnecessary breaking changes
-are documented and versioned carefully
-The goal is not to publish many packages, but to maintain a small, coherent, and dependable ecosystem.
-This is not vibe code.
-It is infrastructure.
-
-## Ecosystem Overview
-
-| Package  | Role | Description |
-|----------|--------|-------------|
-| **Zema** | Validation | Ultra-fast, Zod-inspired schema validation for Dart. |
-| **Qora** | Data | Reactive server-state management and intelligent caching. |
-| **Authyra** | Security | Unified authentication framework for Flutter. |
-| **Cura** | Audit | Project health sentry and dependency vulnerability auditor. |
-
-Package Role Description Status
-Authyra Security  🛠 WIP
-Qora Data  🛠 WIP
-Cura Audit Project health sentry and dependency vulnerability auditor.
-
-Domain
-Package
-Description
-Authentication & Security
-Authyra
-Session management, authentication flows, guards, and security primitives.
-Data Fetching / Server State
-Qora
-Declarative data fetching, caching, and server-state management inspired by proven patterns.
-Validation
-Zema
-Strong and composable data validation for client and server logic.
-Audit & Monitoring
-Lyra
-Logging, auditing, and monitoring tools for application visibility.
-Utilities
-Axo
-Core utilities, helpers, and extensions used across the ecosystem.
-Each package can be used independently or combined to form a complete foundation.Package Design Rules
-All Meragix packages follow the same internal rules:
-minimal dependencies
-clear separation of concerns
-predictable lifecycle and behavior
-consistent naming and structure
-no hidden global state
-If a feature cannot be implemented cleanly, it does not belong in the package.
-Who This Is For
-Meragix is designed for developers who:
-build applications meant to last
-care about architecture and maintainability
-prefer clear abstractions over clever tricks
-want tools that evolve carefully instead of constantly changing
-If you are building serious Flutter applications, Meragix aims to be a reliable foundation.
-Contribution
-Contributions are welcome, but quality always comes first.
-Before submitting a change:
-Make sure it solves a real, well-defined problem
-Keep APIs explicit and stable
-Avoid introducing breaking changes
-Include documentation and tests when relevant
-The ecosystem grows intentionally, not rapidly.
-Status
-Meragix is actively maintained and evolving as part of real production work.
-Updates are driven by usage, not by release schedules.
-Closing Note
-Meragix is not about reinventing Flutter.
-It is about providing solid, dependable building blocks that respect developers’ time and projects.
-Meragix — Foundations for Flutter applications that are built to last.
-
-High-Performance Software Engineering for the Dart & Flutter Ecosystem.
-Meragix is an open-source development studio dedicated to building robust, modular, and extremely high-performance tools. Our mission is to provide Flutter developers with a unified "Core Stack," eliminating architectural complexity so you can focus on building great user experiences.
-
-## Our Vision
-
-The Meragix philosophy is built on three core pillars:
-
-1. **Total Consistency**: Tools that share the same design language, syntax, and seamless integration.
-2. **Raw Performance**: Every package is optimized to minimize memory footprint and maximize execution speed.
-3. **Developer Experience (DX)**: Intuitive, type-safe APIs with documentation that leaves no room for doubt.
-
-## Contact & Support
-
-For security vulnerabilities or professional inquiries, please reach out to:
-meragix.oss@gmail.com (or via GitHub Discussions).
 
 ## License
+
 The entire Meragix ecosystem is released under the **MIT License**. You are free to use it for personal or commercial projects.
 
 _Powered by passion. Maintained by [DonFreddy](https://github.com/donfreddy) and the Meragix community._
