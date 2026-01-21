@@ -187,21 +187,7 @@ When reporting bugs, please include:
 
 ### Contributors
 
-Thanks to all the amazing people who contribute to Meragix!
-�
-
-📄 License
-All Meragix packages are licensed under the .
-
-###
-
-**Meragix** is not a collection of experimental tools.
-Every package exists because it has been used, tested, and refined in real-world applications.
-Philosophy
-Meragix follows a simple principle:
-Build tools that you can trust today, and still rely on years from now.
-This ecosystem is shaped by production constraints, not trends.
-Design decisions are guided by maintainability, clarity, and long-term stability.
+Thanks to all the amazing people who contribute to Meragix!.
 
 ## License
 
