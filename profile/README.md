@@ -1,6 +1,8 @@
 # Meragix
 
-> High-performance packages for the Dart & Flutter ecosystem — built from real production problems, maintained daily.
+> High-performance packages for the Dart & Flutter ecosystem.
+
+Built for developers who value type safety, performance, and maintainability.
 
 ## Why Meragix?
 
