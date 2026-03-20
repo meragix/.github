@@ -14,7 +14,6 @@ Every package here solves a problem I hit in production. If it breaks, my apps b
 |---------------------------------------------|---------------|-----------------------------------------------------------|
 | [**Zema**](https://zema.meragix.dev)        | Validation    | Zod-like runtime type safety and schema composition       |
 | [**Qora**](https://qora.meragix.dev)        | Data          | Server-state management, smart caching, and sync          |
-| [**Authyra**](https://authyra.meragix.dev)  | Auth          | Unified framework for OAuth, Sessions, and Multi-accounts |
 | [**Cura**](https://github.com/meragix/cura) | Tooling       | Dependency health audit & scoring                         |
 
 ## Community & Support
@@ -24,3 +23,7 @@ Every package here solves a problem I hit in production. If it breaks, my apps b
 * **License:** MIT.
 
 _Maintained with ❤️ by [DonFreddy](https://github.com/donfreddy) and the Meragix community._
+
+<!--
+| [**Authyra**](https://authyra.meragix.dev)  | Auth          | Unified framework for OAuth, Sessions, and Multi-accounts |
+<---
